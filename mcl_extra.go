@@ -16,11 +16,6 @@ var primes []Fr // prime factors of r-1
 var maxK int    // Fr supports an nth root of unity for n = 2^{maxK}
 var omega Fr    // a primitive nth root of unity (for the max n that Fr supports)
 
-// Go's module initialization function
-func init() {
-	InitFromString("bls12-381")
-}
-
 // Returns the prime factors of r-1 where r is the order of the field.
 // These are needed to find a generator of the multiplicative subgroup of the filed (of order r-1)
 func initPrimeFactors() {
